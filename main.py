@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
-#import pandas as pd
+import json
+import pandas as pd
 
 class emotionwords:
     def getGood(self):
@@ -24,11 +25,19 @@ class emotionwords:
         array=[]
         for word in word_array:
             array.append(word.text)
-        array.append(bad)
+        array.append("bad")
         return array
     def print(self, array):
         for word in array:
             print(word)
 
 words = emotionwords
-words.print(emotionwords, words.getGood(emotionwords))
+Lords = [words.getGood(emotionwords),words.getBad(emotionwords)]
+df = pd.DataFrame(Lords)
+review = "your company is bad"
+
+
+df=df.T
+print(df[0])
+
+
