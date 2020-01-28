@@ -19,7 +19,7 @@ def dogeocode():
 
         while z < len(list):
             p=0
-            f = geocoder.locationiq(list[z],key='6774a6e0ff9f5f')
+            f = geocoder.locationiq(list[z],key='API KEY)
             address = f.address
             location = f.location
             if location.find(" Blvd")!=-1:
