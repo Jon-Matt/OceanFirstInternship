@@ -15,7 +15,7 @@ list2=[[]]
 
 z = 0
 while (z<len(list)):
-    f = geocoder.locationiq(list[z], key='6774a6e0ff9f5f')
+    f = geocoder.locationiq(list[z], key='API KEY')
     time.sleep(1)
     list2.append([f.lng, f.lat])
     print(list2[z])
@@ -25,6 +25,6 @@ points = np.array(list2)
 vor = Voronoi(points)
 voronoi_plot_2d(vor)
 plt.show()
-f = geocoder.locationiq('12 Paulette Drive, Freehold, New Jersey', key = '6774a6e0ff9f5f')
+f = geocoder.locationiq('12 Paulette Drive, Freehold, New Jersey', key = 'API KEY')
 print(vor.point_region)
 print (list2)
