@@ -46,7 +46,7 @@ banklist = [(latlist[i],lnglist[i]) for i in range(0,len(lnglist))] #creates 2d 
 print(banklist)
 CustomerList=[[]]
 for i in range(len(list)): #creates 2dlist of customer longitudes and latitudes
-    f = geocoder.locationiq(list[i], key = '6774a6e0ff9f5f')
+    f = geocoder.locationiq(list[i], key = 'API KEY')
     CustomerList.append([f.lat, f.lng])
     time.sleep(1)
 
